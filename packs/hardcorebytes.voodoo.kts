@@ -29,85 +29,98 @@ root(voodoo.provider.CurseProvider) {
     // COMMON MODS
     list {
         // Libraries
-        +Mod.appleskin
-        +Mod.autoreglib
         +Mod.baubles
-        +Mod.charsetLib
-        +Mod.cofhCore
-        +Mod.shadowfactsForgelin
         +Mod.mcmultipart
-        +Mod.quacklib
 
         // World Generation
         +Mod.biomesOPlenty
-        +Mod.cofhWorld
         +Mod.geolosys
         +Mod.dynamictrees
-        +Mod.dtbop // DynamicTrees Biomes O' Plenty compat
-        +Mod.dttc  // DynamicTrees Thaumcraft compat
+            +Mod.dtbop // Biomes O' Plenty compatibility.
+            +Mod.dttc  // Thaumcraft compatibility.
 
         // Content
         +Mod.antiqueAtlas
-        +Mod.thermalFoundation
+        +Mod.cofhCore // For potions and enchantments.
+        +Mod.charsetAudio
+        +Mod.charsetBlockCarrying
+        +Mod.charsetImmersion
+        +Mod.chiselsBits
         +Mod.quark
         +Mod.quarkOddities
         +Mod.wearableBackpacks
         // Technology
         +Mod.bwmSuite
-        +Mod.betterWithEngineering
+            +Mod.betterWithEngineering
         +Mod.immersiveEngineering
+            +Mod.cratesFeltBlu      // Storage Crates drop contents when broken.
+            +Mod.engineersDoors     // Treated Wood and Steel doors and trapdoors.
+            +Mod.immersivePetroleum // Oil extraction and processing.
         +Mod.opencomputers
+            +Mod.openlights  // Lights with controllable color.
+            +Mod.openprinter // Printing pages, Folders, File Cabinets.
+            +Mod.openscreens // Flatscreens and holographic screens.
         +Mod.retrocomputers
         +Mod.simplelogicGates
         +Mod.simplelogicWires
+        +Mod.teckle // RedPower2-like tubes.
         // Magic
         +Mod.enderStorage18
         +Mod.thaumcraft
+            +Mod.expandedArcanum  // Thaumcraft Drill heads, IE native clusters.
+            +Mod.engineeredGolems // Golems from Treated Wood and Steel.
+            +Mod.thaumcraftInventoryScanning
+            +Mod.thaumicAugmentation
         +Mod.psi
 
         // Tweakings
+        +Mod.appleskin
         +Mod.artisanWorktables
         +Mod.crafttweaker
+            +Mod.contenttweaker
+            +Mod.loottweaker
+            +Mod.modtweaker
+            +Mod.inworldcrafting
         +Mod.jei
-    }
 
-    // SERVER RECOMMENDED MODS
-    group {
-        side = Side.SERVER
-        optional {
-            selected = true
-            skRecommendation = Recommendation.starred
-        }
-    }.list {
-        +Mod.btfuContinuousRsyncIncrementalBackup
-        +Mod.morpheus
-    }
-
-    // CLIENT MODS
-    group {
-        side = Side.CLIENT
-    }.list {
-        // CLIENT REQUIRED MODS
-
-
-        // CLIENT RECOMMENDED MODS
+        // SERVER RECOMMENDED MODS
         group {
+            side = Side.SERVER
             optional {
                 selected = true
                 skRecommendation = Recommendation.starred
             }
         }.list {
-            +Mod.betterPlacement
-            +Mod.itemScroller
+            +Mod.btfuContinuousRsyncIncrementalBackup
+            +Mod.morpheus
         }
 
-        // CLIENT OPTIONAL MODS
+        // CLIENT MODS
         group {
-            optional {
-                selected = false
-            }
+            side = Side.CLIENT
         }.list {
+            // CLIENT REQUIRED MODS
+            +Mod.blockDropsJeiAddon
+            +Mod.justEnoughResourcesJer
+            +Mod.thaumicJei
 
+            // CLIENT RECOMMENDED MODS
+            group {
+                optional {
+                    selected = true
+                    skRecommendation = Recommendation.starred
+                }
+            }.list {
+                +Mod.betterPlacement
+                +Mod.itemScroller
+            }
+
+            // CLIENT OPTIONAL MODS
+            group {
+                optional {
+                    selected = false
+                }
+            }.list {  }
         }
     }
 }
