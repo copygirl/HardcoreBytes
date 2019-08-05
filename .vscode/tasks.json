@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "Test (MultiMC)",
+        "command": "java",
+        "args": [
+            "-jar", "bootstrap-voodoo.jar",
+            "packs/hardcorebytes.voodoo.kts",
+            "build", "-", "test", "mmc"
+        ],
+        "problemMatcher": []
+    }]
+}
