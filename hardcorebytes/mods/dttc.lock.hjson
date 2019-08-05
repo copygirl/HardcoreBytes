@@ -1,0 +1,11 @@
+{
+    provider: CURSE,
+    dependencies: {
+        REQUIRED: [
+            dynamictrees,
+            thaumcraft
+        ]
+    },
+    projectID: 292752,
+    fileID: 2650353
+}

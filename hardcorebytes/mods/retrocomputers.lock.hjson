@@ -1,0 +1,12 @@
+{
+    provider: CURSE,
+    dependencies: {
+        REQUIRED: [
+            mcmultipart,
+            quacklib,
+            shadowfacts-forgelin
+        ]
+    },
+    projectID: 276918,
+    fileID: 2668652
+}

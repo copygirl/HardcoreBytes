@@ -1,0 +1,10 @@
+{
+    provider: CURSE,
+    dependencies: {
+        REQUIRED: [
+            athenaeum
+        ]
+    },
+    projectID: 284351,
+    fileID: 2751178
+}

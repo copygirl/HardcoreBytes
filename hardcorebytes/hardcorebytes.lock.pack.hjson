@@ -1,0 +1,20 @@
+{
+    id: hardcorebytes,
+    mcVersion: 1.12.2,
+    title: "Hardcore Bytes",
+    version: 0.0.1,
+    authors: [
+        copygirl
+    ],
+    forge: 1.12.2-14.23.5.2838,
+    packOptions: {
+        skCraftOptions: {
+            userFiles: {
+                include: [
+                    options.txt,
+                    quark.cfg
+                ]
+            }
+        }
+    }
+}

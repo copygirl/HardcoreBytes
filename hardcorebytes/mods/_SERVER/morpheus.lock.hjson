@@ -1,0 +1,10 @@
+{
+    provider: CURSE,
+    side: SERVER,
+    optionalData: {
+        selected: true,
+        skRecommendation: starred
+    },
+    projectID: 69118,
+    fileID: 2664449
+}
