@@ -8,7 +8,7 @@ authors   = listOf("copygirl")
 version   = "0.0.1"
 mcVersion = "1.12.2"
 icon      = rootDir.resolve("icon.png")
-forge     = 1.12.2-recommended
+forge     = Forge.mc1_12_2_latest
 
 pack {
     skcraft {
@@ -24,7 +24,7 @@ pack {
 
 root(voodoo.provider.CurseProvider) {
     validMcVersions = setOf("1.12.2", "1.12.1", "1.12")
-    releaseTypes    = setOf(FileType.RELEASE, FileType.BETA)
+    releaseTypes    = setOf(FileType.Release, FileType.Beta)
 
     // COMMON MODS
     list {
@@ -32,11 +32,15 @@ root(voodoo.provider.CurseProvider) {
         +Mod.appleskin
         +Mod.autoreglib
         +Mod.baubles
-        +Mod.cofhcore
+        +Mod.charsetLib
+        +Mod.cofhCore
+        +Mod.shadowfactsForgelin
+        +Mod.mcmultipart
+        +Mod.quacklib
 
         // World Generation
         +Mod.biomesOPlenty
-        +Mod.cofhworld
+        +Mod.cofhWorld
         +Mod.geolosys
         +Mod.dynamictrees
         +Mod.dtbop // DynamicTrees Biomes O' Plenty compat
@@ -53,6 +57,9 @@ root(voodoo.provider.CurseProvider) {
         +Mod.betterWithEngineering
         +Mod.immersiveEngineering
         +Mod.opencomputers
+        +Mod.retrocomputers
+        +Mod.simplelogicGates
+        +Mod.simplelogicWires
         // Magic
         +Mod.enderStorage18
         +Mod.thaumcraft
