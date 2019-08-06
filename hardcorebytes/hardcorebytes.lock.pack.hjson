@@ -11,8 +11,7 @@
         skCraftOptions: {
             userFiles: {
                 include: [
-                    options.txt,
-                    quark.cfg
+                    options.txt
                 ]
             }
         }

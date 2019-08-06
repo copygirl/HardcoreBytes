@@ -13,10 +13,7 @@ forge     = Forge.mc1_12_2_latest
 pack {
     skcraft {
         userFiles = UserFiles(
-            include = listOf(
-                "options.txt",
-                "quark.cfg"
-            ),
+            include = listOf("options.txt"),
             exclude = listOf()
         )
     }
