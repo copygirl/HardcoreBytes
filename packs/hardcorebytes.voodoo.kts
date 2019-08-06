@@ -61,7 +61,6 @@ root(voodoo.provider.CurseProvider) {
         +Mod.retrocomputers
         +Mod.simplelogicGates
         +Mod.simplelogicWires
-        +Mod.teckle // RedPower2-like tubes.
         // Magic
         +Mod.enderStorage18
         +Mod.thaumcraft
