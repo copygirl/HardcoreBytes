@@ -1,6 +1,7 @@
 {
     provider: CURSE,
     side: CLIENT,
+    description: "Don't skip blocks when holding down mouse button to place",
     optionalData: {
         selected: true,
         skRecommendation: starred

@@ -1,6 +1,7 @@
 {
     provider: CURSE,
     side: CLIENT,
+    description: "Use scroll wheen and other shortcuts to move items",
     optionalData: {
         selected: true,
         skRecommendation: starred

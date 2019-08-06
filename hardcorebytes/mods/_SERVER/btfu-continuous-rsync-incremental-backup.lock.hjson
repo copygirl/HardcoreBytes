@@ -1,6 +1,7 @@
 {
     provider: CURSE,
     side: SERVER,
+    description: "Best backup mod in existance! (setup required)",
     optionalData: {
         selected: true,
         skRecommendation: starred

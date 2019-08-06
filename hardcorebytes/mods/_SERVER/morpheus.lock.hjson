@@ -1,6 +1,7 @@
 {
     provider: CURSE,
     side: SERVER,
+    description: "Skips nights if just some players sleep (default 50%)",
     optionalData: {
         selected: true,
         skRecommendation: starred

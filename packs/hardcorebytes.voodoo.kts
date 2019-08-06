@@ -92,8 +92,10 @@ root(voodoo.provider.CurseProvider) {
                 skRecommendation = Recommendation.starred
             }
         }.list {
-            +Mod.btfuContinuousRsyncIncrementalBackup
-            +Mod.morpheus
+            +Mod.btfuContinuousRsyncIncrementalBackup configure
+                { description = "Best backup mod in existance! (setup required)" }
+            +Mod.morpheus configure
+                { description = "Skips nights if just some players sleep (default 50%)" }
         }
 
         // CLIENT MODS
@@ -112,8 +114,10 @@ root(voodoo.provider.CurseProvider) {
                     skRecommendation = Recommendation.starred
                 }
             }.list {
-                +Mod.betterPlacement
-                +Mod.itemScroller
+                +Mod.betterPlacement configure
+                    { description = "Don't skip blocks when holding down mouse button to place" }
+                +Mod.itemScroller configure
+                    { description = "Use scroll wheen and other shortcuts to move items" }
             }
 
             // CLIENT OPTIONAL MODS
