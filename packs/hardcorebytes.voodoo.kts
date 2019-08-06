@@ -29,6 +29,7 @@ root(voodoo.provider.CurseProvider) {
     // COMMON MODS
     list {
         // Libraries
+        +Mod.applecore
         +Mod.baubles
         +Mod.mcmultipart
 
