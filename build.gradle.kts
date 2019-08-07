@@ -1,7 +1,7 @@
 plugins {
     // kotlin("jvm") version "1.3.31" // automatically applied
     // idea // automatically applied
-    id("voodoo") version "0.4.8-SNAPSHOT"
+    id("voodoo") version "0.4.9-SNAPSHOT"
 }
 
 voodoo {
@@ -28,6 +28,6 @@ repositories {
 }
 
 dependencies {
-    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.8+")
-    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.8+")
+    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.9+")
+    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.9+")
 }
