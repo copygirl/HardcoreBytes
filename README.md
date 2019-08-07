@@ -24,7 +24,7 @@ the latest version of mods directly from CurseForge, providing self-updating
 [MultiMC] instances and much more.
 
 ```bash
-# Update mods in the pack to latest:
+# Apply mod changes in pack and update mods to latest:
 ./gradlew hardcorebytes_build
 # Test in MultiMC, creating an instance if necessary:
 ./gradlew hardcorebytes_test_mmc
