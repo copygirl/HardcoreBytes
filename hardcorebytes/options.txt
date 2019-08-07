@@ -88,7 +88,6 @@ key_key.hotbar.9:10
 key_Change Caster Focus:34
 key_Misc Caster Toggle:34:CONTROL
 key_keybind.baublesinventory:48
-key_quark.keybind.toggleAutojump:0
 key_quark.keybind.lockBuilding:37
 key_quark.emote.no:0
 key_quark.emote.yes:0

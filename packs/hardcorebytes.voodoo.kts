@@ -90,8 +90,6 @@ root(voodoo.provider.CurseProvider) {
         }.list {
             +Mod.btfuContinuousRsyncIncrementalBackup configure
                 { description = "Best backup mod in existance! (setup required)" }
-            +Mod.morpheus configure
-                { description = "Skips nights if just some players sleep (default 50%)" }
         }
 
         // CLIENT MODS
