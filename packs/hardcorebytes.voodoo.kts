@@ -79,6 +79,7 @@ root(voodoo.provider.CurseProvider) {
             +Mod.modtweaker
             +Mod.inworldcrafting
         +Mod.jei
+        +Mod.passableLeaves
 
         // SERVER RECOMMENDED MODS
         group {
