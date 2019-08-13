@@ -111,6 +111,8 @@ root(voodoo.provider.CurseProvider) {
             }.list {
                 +Mod.betterPlacement configure
                     { description = "Don't skip blocks when holding down mouse button to place" }
+                +Mod.blur configure
+                    { description = "When a GUI is open, fade out the world in the background" }
                 +Mod.itemScroller configure
                     { description = "Use scroll wheen and other shortcuts to move items" }
             }
