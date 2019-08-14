@@ -1,21 +1,22 @@
 # Hardcore Bytes
 
-This [Minecraft] (Java Edition) modpack project aims to create an experience
-focused on hardcore progression and exploration, making *[OpenComputers]* its
-end goal and teaching it and the other mods on the way.
+This [Minecraft] 1.12.2 modpack project aims to create an experience focused
+on hardcore progression and exploration, making *[OpenComputers]* its end goal
+and teaching it and the other mods on the way.
 
 You will struggle with wildy unfamiliar crafting recipes, explore abandoned
-facilities, extracing resources and programs, eventually building an automated
-base powered by computers.
+facilities, eventually building an automated base powered by computers with
+programs you either coded yourself or scavenged from around the world.
 
 ## Other notable Mods
 
-- *[Geolosys]* for overhauled ore generation. Much rarer and larger veins.
-- *[Biomes O' Plenty]* provides additional biomes for a more diverse world.
-- *[Better With Mods]* offers early-game mechanical power.
-- *[Immersive Engineering]* bridges the gap between mechanics and electricity.
-- *[RetroComputers]* are a low-tier alternative to *OpenComputers*.
-- *[Thaumcraft]* adds extra flavor and a balanced way to craft magical devices.
+- *[Geolosys]*: For overhauled ore generation. Much rarer and larger veins.
+- *[Biomes O' Plenty]*: Provides additional biomes for a more diverse world.
+- *[Better With Mods]*: Offers early-game mechanical power.
+- *[Immersive Engineering]*: Bridges mechanical and electrical power.
+- *[RetroComputers]*: Low-tier alternative to *OpenComputers*.
+- *[Thaumcraft]*: Extra flavor and a way to craft "magical" components.
+- *[Psi]*: Programmable spells, unlocked with late-game magic and technology.
 
 ## Development
 
@@ -37,8 +38,9 @@ the latest version of mods directly from CurseForge, providing self-updating
 
 [OpenComputers]:         https://www.curseforge.com/minecraft/mc-mods/opencomputers
 [Geolosys]:              https://www.curseforge.com/minecraft/mc-mods/geolosys
-[Biomes O' Plenty]:      https://www.curseforge.com/projects/biomes-o-plenty
+[Biomes O' Plenty]:      https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
 [Better With Mods]:      https://www.curseforge.com/minecraft/mc-mods/bwm-suite
-[Immersive Engineering]: https://www.curseforge.com/projects/immersive-engineering
+[Immersive Engineering]: https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
 [RetroComputers]:        https://www.curseforge.com/minecraft/mc-mods/retrocomputers
-[Thaumcraft]:            https://www.curseforge.com/projects/thaumcraft
+[Thaumcraft]:            https://www.curseforge.com/minecraft/mc-mods/thaumcraft
+[Psi]:                   https://www.curseforge.com/minecraft/mc-mods/psi
