@@ -77,7 +77,14 @@
 			"biomes": [
 				"minecraft:desert",
 				"minecraft:mutated_desert",
-				"minecraft:desert_hills"
+				"minecraft:desert_hills",
+
+				"biomesoplenty:lush_desert",
+				"biomesoplenty:outback",
+				"biomesoplenty:steppe",
+				"biomesoplenty:xeric_shrubland",
+
+				"biomesoplenty:oasis"
 			],
 			"isWhitelist": true
 		},
@@ -96,6 +103,7 @@
 			"size": 40,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			],
 			"density": 1.0
@@ -115,6 +123,7 @@
 			"size": 20,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			],
 			"density": 1.0
@@ -143,7 +152,18 @@
 				"minecraft:mutated_extreme_hills",
 				"minecraft:mutated_extreme_hills_with_trees",
 				"minecraft:extreme_hills",
-				"minecraft:smaller_extreme_hills"
+				"minecraft:smaller_extreme_hills",
+
+				"biomesoplenty:alps",
+				"biomesoplenty:crag",
+				"biomesoplenty:highlands",
+				"biomesoplenty:mountain",
+				"biomesoplenty:overgrown_cliffs",
+				"biomesoplenty:vulcanic_island",
+
+				"biomesoplenty:alps_foothills",
+				"biomesoplenty:mountain_foothills"
+
 			],
 			"isWhitelist": true
 		},
@@ -188,7 +208,17 @@
 				"minecraft:swampland",
 				"minecraft:mutated_swampland",
 				"minecraft:mushroom_island",
-				"minecraft:mushroom_island_shore"
+				"minecraft:mushroom_island_shore",
+
+				"biomesoplenty:bayou",
+				"biomesoplenty:bog",
+				"biomesoplenty:dead_swamp",
+				"biomesoplenty:fen",
+				"biomesoplenty:land_of_lakes",
+				"biomesoplenty:lush_swamp",
+				"biomesoplenty:moor",
+				"biomesoplenty:quagmire",
+				"biomesoplenty:wetland"
 			],
 			"isWhitelist": true
 		},
@@ -230,13 +260,17 @@
 			"size": 24,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			],
 			"density": 1.0,
 			"biomes": [
 				"minecraft:ocean",
 				"minecraft:frozen_ocean",
-				"minecraft:deep_ocean"
+				"minecraft:deep_ocean",
+
+				"biomesoplenty:coral_reef",
+				"biomesoplenty:kelp_forest"
 			],
 			"isWhitelist": true
 		},
@@ -287,7 +321,20 @@
 				"minecraft:mutated_plains",
 				"minecraft:plains",
 				"minecraft:ice_flats",
-				"minecraft:mutated_ice_flats"
+				"minecraft:mutated_ice_flats",
+
+				"biomesoplenty:chaparral",
+				"biomesoplenty:flower_field",
+				"biomesoplenty:grassland",
+				"biomesoplenty:grove",
+				"biomesoplenty:lavender_field",
+				"biomesoplenty:meadow",
+				"biomesoplenty:orchard",
+				"biomesoplenty:prairie",
+				"biomesoplenty:shrubland",
+
+				"biomesoplenty:pasture",
+				"biomesoplenty:flower_island"
 			],
 			"isWhitelist": true
 		},
@@ -319,7 +366,16 @@
 				"minecraft:savanna",
 				"minecraft:savanna_rock",
 				"minecraft:mutated_savanna",
-				"minecraft:mutated_savanna_rock"
+				"minecraft:mutated_savanna_rock",
+
+				"biomesoplenty:bamboo_forest",
+				"biomesoplenty:eucalyptus_forest",
+				"biomesoplenty:rainforest",
+				"biomesoplenty:sacred_springs",
+				"biomesoplenty:tropical_rainforest",
+
+				"biomesoplenty:tropical_island"
+
 			],
 			"isWhitelist": true
 		},
@@ -338,6 +394,7 @@
 			"size": 32,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			],
 			"density": 1.0,
@@ -377,7 +434,17 @@
 				"minecraft:mutated_extreme_hills",
 				"minecraft:mutated_extreme_hills_with_trees",
 				"minecraft:extreme_hills",
-				"minecraft:smaller_extreme_hills"
+				"minecraft:smaller_extreme_hills",
+
+				"biomesoplenty:alps",
+				"biomesoplenty:crag",
+				"biomesoplenty:highlands",
+				"biomesoplenty:mountain",
+				"biomesoplenty:overgrown_cliffs",
+				"biomesoplenty:vulcanic_island",
+
+				"biomesoplenty:alps_foothills",
+				"biomesoplenty:mountain_foothills"
 			],
 			"isWhitelist": true
 		},
@@ -396,6 +463,7 @@
 			"size": 24,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			],
 			"density": 1.0
@@ -409,6 +477,7 @@
 			"yMax": 70,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			]
 		},
@@ -420,6 +489,7 @@
 			"yMax": 70,
 			"dimBlacklist": [
 				-1,
+				0,
 				1
 			]
 		},
@@ -431,6 +501,55 @@
 			"yMax": 70,
 			"dimBlacklist": [
 				-1,
+				0,
+				1
+			]
+		},
+		{
+			"block": "quark:marble",
+			"size": 40,
+			"chance": 10,
+			"yMin": 2,
+			"yMax": 70,
+			"dimBlacklist": [
+				-1,
+				0,
+				1
+			]
+		},
+		{
+			"block": "quark:limestone",
+			"size": 40,
+			"chance": 10,
+			"yMin": 2,
+			"yMax": 70,
+			"dimBlacklist": [
+				-1,
+				0,
+				1
+			]
+		},
+		{
+			"block": "quark:jasper",
+			"size": 40,
+			"chance": 10,
+			"yMin": 2,
+			"yMax": 70,
+			"dimBlacklist": [
+				-1,
+				0,
+				1
+			]
+		},
+		{
+			"block": "quark:slate",
+			"size": 40,
+			"chance": 10,
+			"yMin": 2,
+			"yMax": 70,
+			"dimBlacklist": [
+				-1,
+				0,
 				1
 			]
 		}
