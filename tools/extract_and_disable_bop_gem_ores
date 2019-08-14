@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Requires jq to be installed and available on the path.
+# Install or download it from: https://stedolan.github.io/jq/
+
+# Had to compile the "dec_literal_number" branch of jq
+# myself, so number literals like 4.0 would be preserved.
+# Hopefully, it will make it into the main branch soon.
+
+biome_files=(hardcorebytes/config/biomesoplenty/biomes/*/*.json)
+output_file=tools/bop_gem_to_biomes.txt
+
+echo "Processing ${#biome_files[@]} biome files ..."
+
+declare -A gems
+for file in "${biome_files[@]}"; do
+    file_contents=$(<$file)
+    mod_id="$(basename "$(dirname "$file")")"
+    if [ "$mod_id" == "vanilla" ]; then mod_id="minecraft"; fi
+    biome_name="$mod_id:$(basename "$file" .json)"
+
+    # Get the type of gem generated in this biome.
+    gem=$(jq -r '
+            .generators[].with |
+            select(.block == "biomesoplenty:gem_ore") |
+            .properties.variant
+        ' <<< "$file_contents")
+    # Skip this biome if it generates either no gem or amethyst.
+    if [[ -z "$gem" ]] || [ "$gem" == "amethyst" ]; then continue; fi
+
+    # Disable gem ore generation in the remaining biomes.
+    # -j is used to not print a newline at the end of the file.
+    (jq -j '(.generators[] |
+             select(.with.block == "biomesoplenty:gem_ore") |
+             .enable) |= false
+        ' <<< $file_contents) > $file
+
+    # Add to array of gems.
+    if [[ -z "${gems[$gem]}" ]]
+    then gems[$gem]="$biome_name"
+    else gems[$gem]+=" $biome_name"
+    fi
+done
+
+> $output_file # Clear file.
+for gem in "${!gems[@]}"; do
+    biomes=${gems[$gem]}
+    num="${biomes//[^ ]}"
+    echo "$((${#num}+1)) biomes generate \"$gem\"."
+    echo "$gem=${gems[$gem]}" >> $output_file
+done
+echo "Ore generation of the above gems has been disabled."
