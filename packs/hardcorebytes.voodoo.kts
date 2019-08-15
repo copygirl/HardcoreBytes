@@ -58,6 +58,7 @@ root(voodoo.provider.CurseProvider) {
             +Mod.openlights  // Lights with controllable color.
             +Mod.openprinter // Printing pages, Folders, File Cabinets.
             +Mod.openscreens // Flatscreens and holographic screens.
+            // Computronics - see below.
         +Mod.retrocomputers
         +Mod.simplelogicGates
         +Mod.simplelogicWires
@@ -80,6 +81,13 @@ root(voodoo.provider.CurseProvider) {
             +Mod.inworldcrafting
         +Mod.jei
         +Mod.passableLeaves
+
+        withProvider(DirectProvider).list {
+            +"computronics" configure {
+                url      = "http://files.vexatos.com/Computronics/Computronics-1.12.2-1.6.6.jar"
+                fileName = "Computronics-1.12.2-1.6.6.jar"
+            }
+        }
 
         // SERVER RECOMMENDED MODS
         group {
