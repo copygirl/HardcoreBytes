@@ -26,60 +26,60 @@ root(voodoo.provider.CurseProvider) {
     // COMMON MODS
     list {
         // Libraries
-        +Mod.baubles
-        +Mod.mcmultipart
+        +Mod.baubles     // Adds 7 more equipment slots for items
+        +Mod.mcmultipart // Allows certain blocks to fit in a single block space
 
         // World Generation
-        +Mod.biomesOPlenty
-        +Mod.geolosys
-        +Mod.dynamictrees
-            +Mod.dtbop // Biomes O' Plenty compatibility.
-            +Mod.dttc  // Thaumcraft compatibility.
+        +Mod.biomesOPlenty // More biomes and content
+        +Mod.geolosys      // Ores spawn in rare, huge veins
+        +Mod.dynamictrees  // Pretty trees that grow over time
+            +Mod.dtbop     // - Biomes O' Plenty compatibility
+            +Mod.dttc      // - Thaumcraft compatibility
+
+        // Tweaks and Utilities
+        +Mod.appleskin           // Displays hunger and saturation info
+        +Mod.artisanWorktables   // Custom crafting tables, can use tools and fluids
+        +Mod.crafttweaker        // Add, change and remove recipes
+            +Mod.contenttweaker  // - Adds new items and blocks
+            +Mod.loottweaker     // - Change of loot tables
+            +Mod.modtweaker      // - Change more mod-related recipes
+            +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
+        +Mod.jei                 // Look up recipes and uses of items
+        +Mod.passableLeaves      // Pass through leaves
 
         // Content
-        +Mod.antiqueAtlas
-        +Mod.cofhCore // For potions and enchantments.
-        +Mod.charsetAudio
-        +Mod.charsetBlockCarrying
-        +Mod.charsetImmersion
-        +Mod.chiselsBits
-        +Mod.quark
-        +Mod.quarkOddities
-        +Mod.wearableBackpacks
+        +Mod.antiqueAtlas         // Craftable atlas with waypoints
+        +Mod.cofhCore             // More potions and enchantments
+        +Mod.charsetBlockCarrying // Pick up blocks and carry them around
+        +Mod.charsetImmersion     // Stack ingots, plates and gears in-world
+        +Mod.chiselsBits          // Build custom sub-block decorations
+        +Mod.quark                // Tons of Vanilla-style tweaks and additions
+        +Mod.quarkOddities        // Matrix enchanting and Totem of Holding
+        +Mod.wearableBackpacks    // Backpacks!
         // Technology
-        +Mod.bwmSuite
-            +Mod.betterWithEngineering
-        +Mod.immersiveEngineering
-            +Mod.cratesFeltBlu      // Storage Crates drop contents when broken.
-            +Mod.engineersDoors     // Treated Wood and Steel doors and trapdoors.
-            +Mod.immersivePetroleum // Oil extraction and processing.
-        +Mod.opencomputers
-            +Mod.openlights  // Lights with controllable color.
-            +Mod.openprinter // Printing pages, Folders, File Cabinets.
-            +Mod.openscreens // Flatscreens and holographic screens.
-            // Computronics - see below.
-        +Mod.retrocomputers
-        +Mod.simplelogicGates
-        +Mod.simplelogicWires
+        +Mod.bwmSuite                   // Gameplay changes, mechanical power, ...
+            +Mod.betterWithEngineering  // - Integration with Immersive Engineering
+        +Mod.immersiveEngineering       // Electrical power, machines, ...
+            +Mod.cratesFeltBlu          // - Storage Crates drop contents when broken
+            +Mod.engineersDoors         // - Treated Wood and Steel doors and trapdoors
+            +Mod.immersivePetroleum     // - Oil extraction and processing
+        +Mod.opencomputers              // Modular computers programmable with Lua
+            +Mod.charsetAudio           // - Audio storage and cables
+            +Mod.openlights             // - Lights with controllable color
+            +Mod.openprinter            // - Printing pages, Folders, File Cabinets
+            +Mod.openscreens            // - Flatscreens and holographic screens
+            // Computronics (see below) // - Additional computer components
+        +Mod.retrocomputers             // Simpler computers programmable with Forth
+        +Mod.simplelogicGates           // Various redstone gates
+        +Mod.simplelogicWires           // Redstone wires (normal, insulated, bundled)
         // Magic
-        +Mod.enderStorage18
-        +Mod.thaumcraft
-            +Mod.expandedArcanum  // Thaumcraft Drill heads, IE native clusters.
-            +Mod.engineeredGolems // Golems from Treated Wood and Steel.
-            +Mod.thaumcraftInventoryScanning
-            +Mod.thaumicAugmentation
-        +Mod.psi
-
-        // Tweakings
-        +Mod.appleskin
-        +Mod.artisanWorktables
-        +Mod.crafttweaker
-            +Mod.contenttweaker
-            +Mod.loottweaker
-            +Mod.modtweaker
-            +Mod.inworldcrafting
-        +Mod.jei
-        +Mod.passableLeaves
+        +Mod.enderStorage18                  // Shared storage even between dimensions
+        +Mod.thaumcraft                      // So much Magic!
+            +Mod.expandedArcanum             // - Thaumcraft Drill heads, IE native clusters
+            +Mod.engineeredGolems            // - Golems from Treated Wood and Steel
+            +Mod.thaumcraftInventoryScanning // - Easily scan items from inventory screens
+            +Mod.thaumicAugmentation         // - More magic and doors
+        +Mod.psi                             // Programmable magic guns
 
         withProvider(DirectProvider).list {
             +"computronics" configure {
