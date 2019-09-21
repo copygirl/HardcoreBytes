@@ -1,0 +1,10 @@
+{
+    provider: CURSE,
+    dependencies: {
+        REQUIRED: [
+            carrots-lib
+        ]
+    },
+    projectID: 310383,
+    fileID: 2660325
+}

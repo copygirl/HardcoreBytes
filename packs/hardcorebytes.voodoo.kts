@@ -36,15 +36,24 @@ root(voodoo.provider.CurseProvider) {
             +Mod.dtbop     // - Biomes O' Plenty compatibility
             +Mod.dttc      // - Thaumcraft compatibility
 
+        // Gameplay Changes
+        +Mod.sereneSeasons         // Seasons!
+        +Mod.toolBelt              // Switch tools on the fly
+        +Mod.toughAsNails          // Temperature and thirst
+            +Mod.armorUnderwearMod // - Add TaN linings to any armor
+
         // Tweaks and Utilities
         +Mod.appleskin           // Displays hunger and saturation info
+        +Mod.anvilPatchLawful    // Remove increase in enchantment / repair cost
         +Mod.artisanWorktables   // Custom crafting tables, can use tools and fluids
         +Mod.crafttweaker        // Add, change and remove recipes
             +Mod.contenttweaker  // - Adds new items and blocks
             +Mod.loottweaker     // - Change of loot tables
             +Mod.modtweaker      // - Change more mod-related recipes
             +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
+        +Mod.itemphysic          // Custom pickup, floating, burning tweaks, ...
         +Mod.jei                 // Look up recipes and uses of items
+        +Mod.multiMine           // Save mining progress, mine with other players
         +Mod.passableLeaves      // Pass through leaves
 
         // Content
