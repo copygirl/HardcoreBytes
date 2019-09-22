@@ -246,45 +246,6 @@
       "ingredient": "ore:ingotTin",
       "langKey": "material.athenaeum.tin",
       "oreDictKey": "artisansToolTin"
-    },
-    {
-      "name": "manasteel",
-      "harvestLevel": 3,
-      "maxUses": 300,
-      "efficiency": 6.2,
-      "damage": 2.0,
-      "enchantability": 20,
-      "color": "3389ff",
-      "shiny": true,
-      "ingredient": "ore:ingotManasteel",
-      "langKey": "material.athenaeum.manasteel",
-      "oreDictKey": "artisansToolManasteel"
-    },
-    {
-      "name": "elementium",
-      "harvestLevel": 3,
-      "maxUses": 720,
-      "efficiency": 6.2,
-      "damage": 2.0,
-      "enchantability": 20,
-      "color": "f15cae",
-      "shiny": true,
-      "ingredient": "ore:ingotElvenElementium",
-      "langKey": "material.athenaeum.elementium",
-      "oreDictKey": "artisansToolElementium"
-    },
-    {
-      "name": "terrasteel",
-      "harvestLevel": 4,
-      "maxUses": 2300,
-      "efficiency": 9.0,
-      "damage": 3.0,
-      "enchantability": 26,
-      "color": "53f900",
-      "shiny": true,
-      "ingredient": "ore:ingotTerrasteel",
-      "langKey": "material.athenaeum.terrasteel",
-      "oreDictKey": "artisansToolTerrasteel"
     }
   ]
 }
