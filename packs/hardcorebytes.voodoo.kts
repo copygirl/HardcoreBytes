@@ -47,8 +47,9 @@ root(voodoo.provider.CurseProvider) {
         +Mod.anvilPatchLawful    // Remove increase in enchantment / repair cost
         +Mod.artisanWorktables   // Custom crafting tables, can use tools and fluids
         +Mod.crafttweaker        // Add, change and remove recipes
-            +Mod.contenttweaker  // - Adds new items and blocks
-            +Mod.loottweaker     // - Change of loot tables
+            +Mod.contenttweaker  // - Can add new items and blocks
+            +Mod.dropt           // - Add and modify block drops
+            +Mod.loottweaker     // - Changing of loot tables
             +Mod.modtweaker      // - Change more mod-related recipes
             +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
         +Mod.itemphysic          // Custom pickup, floating, burning tweaks, ...
