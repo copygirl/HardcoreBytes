@@ -41,17 +41,17 @@ primitive_string_sieve.itemGetContainerItem = function(stack) {
 primitive_string_sieve.register();
 
 
-// == Flint Hatchet + Head ==
+// == Primitive Flint Hatchet + Head ==
 
-var flint_hatchet_head = VanillaFactory.createItem("flint_hatchet_head");
-flint_hatchet_head.register();
+var hatchet_head = VanillaFactory.createItem("flint_hatchet_head");
+hatchet_head.register();
 
-var flint_hatchet = VanillaFactory.createItem("flint_hatchet");
-flint_hatchet.toolClass = "axe";
-flint_hatchet.toolLevel = 1;
-flint_hatchet.maxStackSize = 1;
-flint_hatchet.maxDamage = 48;
-flint_hatchet.itemDestroySpeed = function(stack, blockState) {
+var hatchet = VanillaFactory.createItem("primitive_flint_hatchet");
+hatchet.toolClass = "axe";
+hatchet.toolLevel = 1;
+hatchet.maxStackSize = 1;
+hatchet.maxDamage = 48;
+hatchet.itemDestroySpeed = function(stack, blockState) {
     var definition  = blockState.block.definition;
     var harvestTool = definition.harvestTool;
     if (harvestTool == "axe") {
@@ -60,7 +60,7 @@ flint_hatchet.itemDestroySpeed = function(stack, blockState) {
         else return 4.0F;
     } else return 1.0F;
 };
-flint_hatchet.itemDestroyedBlock = function(stack, ctWorld, ctBlockState, ctPos, entity) {
+hatchet.itemDestroyedBlock = function(stack, ctWorld, ctBlockState, ctPos, entity) {
     // Why the heck is this so complicated?
     // ContentTweaker has its own world, block state and position.
     // Thankfully, the entity is based on CraftTweaker's IEntity.
@@ -79,19 +79,19 @@ flint_hatchet.itemDestroyedBlock = function(stack, ctWorld, ctBlockState, ctPos,
     }
     return true;
 };
-flint_hatchet.register();
+hatchet.register();
 
 
-// == Flint Knife + Blade ==
+// == Primitive Flint Knife + Blade ==
 
-var flint_knife_blade = VanillaFactory.createItem("flint_knife_blade");
-flint_knife_blade.register();
+var knife_blade = VanillaFactory.createItem("flint_knife_blade");
+knife_blade.register();
 
-var flint_knife = VanillaFactory.createItem("flint_knife");
-flint_knife.maxStackSize = 1;
-flint_knife.maxDamage = 64;
-flint_knife.itemDestroyedBlock = function(stack, world, blockState, pos, entity) {
+var knife = VanillaFactory.createItem("primitive_flint_knife");
+knife.maxStackSize = 1;
+knife.maxDamage = 64;
+knife.itemDestroyedBlock = function(stack, world, blockState, pos, entity) {
     stack.damage(1, entity);
     return true;
 };
-flint_knife.register();
+knife.register();

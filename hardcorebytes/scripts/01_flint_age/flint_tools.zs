@@ -7,8 +7,8 @@ var binding = <ore:toolBindingPrimitive>;
 
 var hatchet_head = <contenttweaker:flint_hatchet_head>;
 var knife_blade  = <contenttweaker:flint_knife_blade>;
-var hatchet = <contenttweaker:flint_hatchet>;
-var knife   = <contenttweaker:flint_knife>;
+var hatchet = <contenttweaker:primitive_flint_hatchet>;
+var knife   = <contenttweaker:primitive_flint_knife>;
 
 
 // ======================
@@ -69,10 +69,10 @@ var knife_nbt = knife.withTag({
         { UUIDMost: 1, UUIDLeast: 2, Slot: "mainhand", AttributeName: "generic.attackDamage", Name: "generic.attackDamage", Operation: 0, Amount: -1.6 }
     ]});
 
-recipes.addShaped("flint_hatchet", hatchet_nbt,
+recipes.addShaped("primitive_flint_hatchet", hatchet_nbt,
     [[ binding, hatchet_head ],
      [ stick  , binding      ]]);
 
-recipes.addShaped("flint_knife", knife_nbt,
+recipes.addShaped("primitive_flint_knife", knife_nbt,
     [[ binding, knife_blade ],
      [ stick  , binding     ]]);
