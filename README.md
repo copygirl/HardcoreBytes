@@ -1,12 +1,8 @@
 # Hardcore Bytes
 
-This [Minecraft] 1.12.2 modpack project aims to create an experience focused
-on hardcore progression and exploration, making *[OpenComputers]* its end goal
-and teaching it and the other mods on the way.
+This [Minecraft] 1.12.2 modpack project aims to create an experience focused on hardcore progression and exploration, making *[OpenComputers]* its end goal and teaching it and the other mods on the way.
 
-You will struggle with wildy unfamiliar crafting recipes, explore abandoned
-facilities, eventually building an automated base powered by computers with
-programs you either coded yourself or scavenged from around the world.
+You will struggle with wildy unfamiliar crafting recipes and mechanics, explore abandoned facilities, eventually building an automated base powered by computers with programs you either coded yourself or scavenged from around the world.
 
 ## Other notable Mods
 
@@ -20,9 +16,7 @@ programs you either coded yourself or scavenged from around the world.
 
 ## Development
 
-*Hardcore Bytes* uses [Voodoo] for easy mod version management, downloading
-the latest version of mods directly from CurseForge, providing self-updating
-[MultiMC] instances and much more.
+*Hardcore Bytes* uses [Voodoo] for easy mod version management, downloading the latest version of mods directly from CurseForge, providing self-updating [MultiMC] instances and much more.
 
 ```bash
 # Apply mod changes in pack and update mods to latest:
