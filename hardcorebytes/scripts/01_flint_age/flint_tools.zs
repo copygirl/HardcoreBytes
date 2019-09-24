@@ -5,10 +5,10 @@ var stick   = <minecraft:stick>;
 var flint   = <minecraft:flint>;
 var binding = <ore:toolBindingPrimitive>;
 
-var hatchet_head = <contenttweaker:flint_hatchet_head>;
-var knife_blade  = <contenttweaker:flint_knife_blade>;
-var hatchet = <contenttweaker:primitive_flint_hatchet>;
-var knife   = <contenttweaker:primitive_flint_knife>;
+var hatchet_head = <hardcorebytesmod:flint_hatchet_head>;
+var knife_blade  = <hardcorebytesmod:flint_knife_blade>;
+var hatchet = <hardcorebytesmod:primitive_flint_hatchet>;
+var knife   = <hardcorebytesmod:primitive_flint_knife>;
 
 
 // ======================
@@ -16,7 +16,7 @@ var knife   = <contenttweaker:primitive_flint_knife>;
 // ======================
 
 binding.add(<minecraft:string>);
-binding.add(<contenttweaker:plant_fiber>);
+binding.add(<hardcorebytesmod:plant_fiber>);
 // TODO: Add hemp fiber as well?
 
 // Flint Knife is able to gather plant fiber better.

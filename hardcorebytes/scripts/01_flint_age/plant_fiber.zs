@@ -52,7 +52,7 @@ function drop_plant_fiber(blocks as string[], chance as int) {
             .mainHand("WHITELIST", <ore:toolGatherPlantFiber>.itemArray))
         .replaceStrategy("ADD")
         .addDrop(Dropt.drop().selector(Dropt.weight(4), "EXCLUDED")
-                            .items([<contenttweaker:plant_fiber>]))
+                            .items([<hardcorebytesmod:plant_fiber>]))
         .addDrop(Dropt.drop().selector(Dropt.weight(chance - 1)))
     );
     // Without it.. well, get punchin'!
@@ -62,7 +62,7 @@ function drop_plant_fiber(blocks as string[], chance as int) {
             .mainHand("BLACKLIST", <ore:toolGatherPlantFiber>.itemArray))
         .replaceStrategy("ADD")
         .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
-                            .items([<contenttweaker:plant_fiber>]))
+                            .items([<hardcorebytesmod:plant_fiber>]))
         .addDrop(Dropt.drop().selector(Dropt.weight(chance - 1)))
     );
 }
@@ -79,5 +79,5 @@ Dropt.list("plant_fiber").add(Dropt.rule()
     .replaceStrategy("ADD")
     .dropStrategy("UNIQUE")
     .dropCount(Dropt.range(2))
-    .addDrop(Dropt.drop().items([<contenttweaker:plant_fiber>], Dropt.range(0, 2)))
+    .addDrop(Dropt.drop().items([<hardcorebytesmod:plant_fiber>], Dropt.range(0, 2)))
     .addDrop(Dropt.drop().items([<minecraft:stick>], Dropt.range(1, 2))));

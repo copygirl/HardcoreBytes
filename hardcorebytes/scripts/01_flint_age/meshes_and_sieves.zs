@@ -1,14 +1,14 @@
 #priority -100
 
 
-var plant_fiber = <contenttweaker:plant_fiber>;
+var plant_fiber = <hardcorebytesmod:plant_fiber>;
 var string_     = <minecraft:string>; // "string" is a keyword.
 var stick       = <minecraft:stick>;
 
-var plant_fiber_mesh = <contenttweaker:plant_fiber_mesh>;
-var string_mesh      = <contenttweaker:string_mesh>;
-var plant_fiber_sieve = <contenttweaker:primitive_plant_fiber_sieve>;
-var string_sieve      = <contenttweaker:primitive_string_sieve>;
+var plant_fiber_mesh = <hardcorebytesmod:plant_fiber_mesh>;
+var string_mesh      = <hardcorebytesmod:string_mesh>;
+var plant_fiber_sieve = <hardcorebytesmod:primitive_plant_fiber_sieve>;
+var string_sieve      = <hardcorebytesmod:primitive_string_sieve>;
 
 
 // ======================
