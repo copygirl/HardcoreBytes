@@ -99,7 +99,7 @@ root(voodoo.provider.CurseProvider) {
 
         withProvider(LocalProvider).list {
             +"HardcoreBytesMod" configure {
-                fileSrc = "HardcoreBytesMod-1.12.2-0.1.0.jar"
+                fileSrc = "HardcoreBytesMod-1.12.2-0.1.0-SNAPSHOT.jar"
             }
         }
 
@@ -144,7 +144,10 @@ root(voodoo.provider.CurseProvider) {
                 optional {
                     selected = false
                 }
-            }.list {  }
+            }.list {
+                +Mod.betterFoliage configure
+                    { description = "Prettier vegetation, such as leaves and grass, at some FPS cost" }
+            }
         }
     }
 }

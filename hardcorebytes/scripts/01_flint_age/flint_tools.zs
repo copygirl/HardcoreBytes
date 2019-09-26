@@ -33,19 +33,23 @@ binding.add(<hardcorebytesmod:plant_fiber>);
 
 // == Tool Heads ==
 
-recipes.addShaped("flint_knife_blade", knife_blade,
+recipes.addShaped("flint_knife_blade",
+    knife_blade.withDamage(knife_blade.maxDamage),
     [[ null , flint ],
      [ flint, null  ]]);
 
-recipes.addShaped("flint_spade_head", spade_head,
+recipes.addShaped("flint_spade_head",
+    spade_head.withDamage(spade_head.maxDamage),
     [[ flint ],
      [ flint ]]);
 
-recipes.addShaped("flint_hatchet_head", hatchet_head,
+recipes.addShaped("flint_hatchet_head",
+    hatchet_head.withDamage(hatchet_head.maxDamage),
     [[ flint, flint ],
      [ flint, null  ]]);
 
-recipes.addShaped("flint_hoe_head", hoe_head,
+recipes.addShaped("flint_hoe_head",
+    hoe_head.withDamage(hoe_head.maxDamage),
     [[ flint, flint ]]);
 
 
