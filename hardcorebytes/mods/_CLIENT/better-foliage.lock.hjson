@@ -1,0 +1,14 @@
+{
+    provider: CURSE,
+    side: CLIENT,
+    description: "Prettier vegetation, such as leaves and grass, at some FPS cost",
+    optionalData: {
+    },
+    dependencies: {
+        REQUIRED: [
+            shadowfacts-forgelin
+        ]
+    },
+    projectID: 228529,
+    fileID: 2631951
+}
