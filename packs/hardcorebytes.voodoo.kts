@@ -52,6 +52,7 @@ root(voodoo.provider.CurseProvider) {
             +Mod.loottweaker     // - Changing of loot tables
             +Mod.modtweaker      // - Change more mod-related recipes
             +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
+        +Mod.foamfixForMinecraft // Optimizations for cutting down RAM usage
         +Mod.itemphysic          // Custom pickup, floating, burning tweaks, ...
         +Mod.jei                 // Look up recipes and uses of items
         +Mod.multiMine           // Save mining progress, mine with other players
