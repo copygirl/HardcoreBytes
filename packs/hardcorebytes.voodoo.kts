@@ -26,6 +26,7 @@ root(voodoo.provider.CurseProvider) {
     // COMMON MODS
     list {
         // Libraries
+        +Mod.applecore   // Food related library, required for BWM's HCHunger
         +Mod.baubles     // Adds 7 more equipment slots for items
         +Mod.mcmultipart // Allows certain blocks to fit in a single block space
 
@@ -136,7 +137,7 @@ root(voodoo.provider.CurseProvider) {
                 +Mod.blur configure
                     { description = "When a GUI is open, fade out the world in the background" }
                 +Mod.itemScroller configure
-                    { description = "Use scroll wheen and other shortcuts to move items" }
+                    { description = "Use scroll wheel and other shortcuts to move items" }
             }
 
             // CLIENT OPTIONAL MODS
