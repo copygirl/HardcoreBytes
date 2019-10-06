@@ -7,11 +7,13 @@ var knife_blade  = <hardcorebytesmod:flint_knife_blade>;
 var spade_head   = <hardcorebytesmod:flint_spade_head>;
 var hatchet_head = <hardcorebytesmod:flint_hatchet_head>;
 var hoe_head     = <hardcorebytesmod:flint_hoe_head>;
+var hammer_head  = <hardcorebytesmod:flint_hammer_head>;
 
 var knife   = <hardcorebytesmod:primitive_flint_knife>;
 var spade   = <hardcorebytesmod:primitive_flint_spade>;
 var hatchet = <hardcorebytesmod:primitive_flint_hatchet>;
 var hoe     = <hardcorebytesmod:primitive_flint_hoe>;
+var hammer  = <hardcorebytesmod:primitive_flint_hammer>;
 
 
 // ======================
@@ -52,6 +54,11 @@ recipes.addShaped("flint_hoe_head",
     hoe_head.withDamage(hoe_head.maxDamage),
     [[ flint, flint ]]);
 
+recipes.addShaped("flint_hammer_head",
+    hammer_head.withDamage(hammer_head.maxDamage),
+    [[ flint, null  ],
+     [ null , flint ]]);
+
 
 // == Tools ==
 
@@ -69,4 +76,8 @@ recipes.addShaped("primitive_flint_hatchet", hatchet,
 
 recipes.addShaped("primitive_flint_hoe", hoe,
     [[ binding, hoe_head ],
-     [ stick  , binding      ]]);
+     [ stick  , binding  ]]);
+
+recipes.addShaped("primitive_flint_hammer", hammer,
+    [[ binding, hammer_head ],
+     [ stick  , binding     ]]);
