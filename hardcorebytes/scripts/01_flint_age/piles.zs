@@ -3,11 +3,6 @@ import crafttweaker.item.IItemStack;
 import mods.dropt.Dropt;
 
 
-// The chance (1/X) for a gravel pile to drop from
-// breaking a dirt block instead of a dirt pile.
-// Allows harvesting flint in gravel-sparse places.
-static DIRT_GRAVEL_WEIGHT as int = 6;
-
 var dirt_blocks = [
     // Normal Dirt             Coarse Dirt
     [ <minecraft:dirt:0>    , <minecraft:dirt:1>      ], // Vanilla
@@ -24,33 +19,31 @@ var pile_items = [
 ] as IItemStack[];
 
 
-// ======================
-// Additional Block Drops
-// ======================
-
+// ===================
+// Replace Block Drops
+// ===================
 
 function modify_dirt_drops(block as IIngredient, extra as IItemStack, pile as IItemStack) {
-    var dirt_gravel_drop_array = [<betterwithmods:gravel_pile>] as IItemStack[];
-    for i in 0 to DIRT_GRAVEL_WEIGHT { dirt_gravel_drop_array += <betterwithmods:dirt_pile>; }
-
-    Dropt.list("dirt_piles").add(Dropt.rule()
+    Dropt.list("piles").add(Dropt.rule()
         .matchDrops([block])
         .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
         .dropStrategy("UNIQUE")
         .dropCount(Dropt.range(4))
 
         // Always drop a dirt pile.
-        .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+        .addDrop(Dropt.drop().selector(Dropt.weight(1000000), "EXCLUDED")
                              .items([<betterwithmods:dirt_pile>]))
-        // Usually drop a dirt pile but sometimes gravel.
-        .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
-                             .items(dirt_gravel_drop_array))
         // Drop the extra pile (gravel if coarse, dirt otherwise).
-        .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+        .addDrop(Dropt.drop().selector(Dropt.weight(1000000), "EXCLUDED")
                              .items([extra]))
         // Drop the dirt-specific pile (dirt, mud, sand or clay).
-        .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+        .addDrop(Dropt.drop().selector(Dropt.weight(1000000), "EXCLUDED")
                              .items([pile]))
+        // Usually drop a dirt pile but sometimes gravel.
+        .addDrop(Dropt.drop().selector(Dropt.weight(18), "EXCLUDED")
+                             .items([<betterwithmods:dirt_pile>]))
+        .addDrop(Dropt.drop().selector(Dropt.weight(3, -1), "EXCLUDED")
+                             .items([<betterwithmods:gravel_pile>]))
     );
 }
 
@@ -61,6 +54,32 @@ for i, dirts in dirt_blocks {
     modify_dirt_drops(normal, <betterwithmods:dirt_pile>, pile);
     modify_dirt_drops(coarse, <betterwithmods:gravel_pile>, pile);
 }
+
+// Drop sand piles from sand and red sand.
+Dropt.list("piles").add(Dropt.rule()
+    .matchDrops([<minecraft:sand:0>])
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
+    .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+                         .items([<betterwithmods:sand_pile>], Dropt.range(4))));
+Dropt.list("piles").add(Dropt.rule()
+    .matchDrops([<minecraft:sand:1>])
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
+    .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+                         .items([<betterwithmods:red_sand_pile>], Dropt.range(4))));
+
+// Drop gravel piles (sometimes flint directly) from gravel.
+Dropt.list("piles").add(Dropt.rule()
+    .matchDrops([<minecraft:gravel>])
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
+    .dropStrategy("UNIQUE")
+    .dropCount(Dropt.range(2))
+    .addDrop(Dropt.drop().selector(Dropt.weight(1000000), "EXCLUDED")
+                         .items([<betterwithmods:gravel_pile>], Dropt.range(3)))
+    .addDrop(Dropt.drop().selector(Dropt.weight(9, -3), "EXCLUDED")
+                         .items([<betterwithmods:gravel_pile>]))
+    .addDrop(Dropt.drop().selector(Dropt.weight(1), "EXCLUDED")
+                         .items([<minecraft:flint>]))
+);
 
 
 // ======================
