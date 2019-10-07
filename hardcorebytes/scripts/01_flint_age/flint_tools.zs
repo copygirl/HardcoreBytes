@@ -1,3 +1,4 @@
+import crafttweaker.item.IItemStack;
 
 var stick   = <minecraft:stick>;
 var flint   = <minecraft:flint>;
@@ -81,3 +82,38 @@ recipes.addShaped("primitive_flint_hoe", hoe,
 recipes.addShaped("primitive_flint_hammer", hammer,
     [[ binding, hammer_head ],
      [ stick  , binding     ]]);
+
+
+// == Tool Repairing with Flint ==
+
+var tools_2flint = [
+    <hardcorebytesmod:primitive_flint_knife>,
+    <hardcorebytesmod:primitive_flint_spade>,
+    <hardcorebytesmod:primitive_flint_hoe>,
+// Doesn't make sense to "sharpen" a hammer.
+//  <hardcorebytesmod:primitive_flint_hammer>,
+] as IItemStack[];
+
+var tools_3flint = [
+    <hardcorebytesmod:primitive_flint_hatchet>,
+] as IItemStack[];
+
+for tool in tools_2flint {
+    var name = tool.displayName.toLowerCase();
+    recipes.addShapeless("repair_" + name, tool,
+        [ tool.anyDamage().marked("tool"), flint ],
+        function(out, ins, cInfo) {
+            var newDamage = max(0, ins.tool.damage - 32);
+            return ins.tool.withDamage(newDamage);
+        }, null);
+}
+
+for tool in tools_3flint {
+    var name = tool.displayName.toLowerCase();
+    recipes.addShapeless("repair_" + name, tool,
+        [ tool.anyDamage().marked("tool"), flint ],
+        function(out, ins, cInfo) {
+            var newDamage = max(0, ins.tool.damage - 24);
+            return ins.tool.withDamage(newDamage);
+        }, null);
+}
