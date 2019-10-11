@@ -55,6 +55,7 @@ root(voodoo.provider.CurseProvider) {
             +Mod.loottweaker     // - Changing of loot tables
             +Mod.modtweaker      // - Change more mod-related recipes
             +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
+        +Mod.dynamicSurroundings // Improve visual and audible experience
         +Mod.foamfixForMinecraft // Optimizations for cutting down RAM usage
         +Mod.itemphysic          // Custom pickup, floating, burning tweaks, ...
         +Mod.jei                 // Look up recipes and uses of items
@@ -67,6 +68,7 @@ root(voodoo.provider.CurseProvider) {
         +Mod.charsetBlockCarrying // Pick up blocks and carry them around
         +Mod.charsetImmersion     // Stack ingots, plates and gears in-world
         +Mod.chiselsBits          // Build custom sub-block decorations
+        +Mod.fairyLights          // Adds adorable looking hanging lights
         +Mod.quark                // Tons of Vanilla-style tweaks and additions
         +Mod.quarkOddities        // Matrix enchanting and Totem of Holding
         +Mod.wearableBackpacks    // Backpacks!
@@ -142,6 +144,8 @@ root(voodoo.provider.CurseProvider) {
                     { description = "When a GUI is open, fade out the world in the background" }
                 +Mod.itemScroller configure
                     { description = "Use scroll wheel and other shortcuts to move items" }
+                +Mod.soundFilters configure
+                    { description = "Adds reverb in caves and mutes sounds that are occluded" }
             }
 
             // CLIENT OPTIONAL MODS

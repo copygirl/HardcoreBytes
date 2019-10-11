@@ -2,9 +2,9 @@
     provider: CURSE,
     dependencies: {
         REQUIRED: [
-            creativecore
+            orelib
         ]
     },
-    projectID: 258587,
-    fileID: 2803710
+    projectID: 238891,
+    fileID: 2802985
 }
