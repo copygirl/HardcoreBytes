@@ -11,6 +11,9 @@ icon      = rootDir.resolve("icon.png")
 forge     = Forge.mc1_12_2_latest
 
 pack {
+    multimc {
+        skPackUrl = "https://meowface.org/copygirl/HardcoreBytes/hardcorebytes.json"
+    }
     skcraft {
         userFiles = UserFiles(
             include = listOf("options.txt"),
