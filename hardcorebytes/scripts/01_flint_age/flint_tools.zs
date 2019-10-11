@@ -33,7 +33,6 @@ binding.add(<hardcorebytesmod:plant_fiber>);
 // Crafting Recipes (2x2)
 // ======================
 
-
 // == Tool Heads ==
 
 recipes.addShaped("flint_knife_blade",

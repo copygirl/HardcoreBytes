@@ -40,6 +40,7 @@ function modify_dirt_drops(block as IIngredient, extra as IItemStack, pile as II
         .addDrop(Dropt.drop().selector(Dropt.weight(1000000), "EXCLUDED")
                              .items([pile]))
         // Usually drop a dirt pile but sometimes gravel.
+        // Drops dirt pile more often if Fortune enchantment is used.
         .addDrop(Dropt.drop().selector(Dropt.weight(18), "EXCLUDED")
                              .items([<betterwithmods:dirt_pile>]))
         .addDrop(Dropt.drop().selector(Dropt.weight(3, -1), "EXCLUDED")
@@ -68,6 +69,7 @@ Dropt.list("piles").add(Dropt.rule()
                          .items([<betterwithmods:red_sand_pile>], Dropt.range(4))));
 
 // Drop gravel piles (sometimes flint directly) from gravel.
+// Drops flint more often if Fortune enchantment is used.
 Dropt.list("piles").add(Dropt.rule()
     .matchDrops([<minecraft:gravel>])
     .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
@@ -107,4 +109,16 @@ for i, dirts in dirt_blocks {
         <betterwithmods:dirt_pile>,
         pile
     ]);
+}
+
+if (REMOVE_CRAFTING) {
+    recipes.addShapeless("gravel_from_piles", <minecraft:gravel>,
+        [ <betterwithmods:gravel_pile>, <betterwithmods:gravel_pile>,
+          <betterwithmods:gravel_pile>, <betterwithmods:gravel_pile> ]);
+    recipes.addShapeless("sand_from_piles", <minecraft:sand:0>,
+        [ <betterwithmods:sand_pile>, <betterwithmods:sand_pile>,
+          <betterwithmods:sand_pile>, <betterwithmods:sand_pile> ]);
+    recipes.addShapeless("red_sand_from_piles", <minecraft:sand:1>,
+        [ <betterwithmods:red_sand_pile>, <betterwithmods:red_sand_pile>,
+          <betterwithmods:red_sand_pile>, <betterwithmods:red_sand_pile> ]);
 }
