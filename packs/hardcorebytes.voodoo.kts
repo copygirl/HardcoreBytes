@@ -32,6 +32,7 @@ root(voodoo.provider.CurseProvider) {
         +Mod.applecore   // Food related library, required for BWM's HCHunger
         +Mod.baubles     // Adds 7 more equipment slots for items
         +Mod.mcmultipart // Allows certain blocks to fit in a single block space
+        +Mod.shadowfactsForgelin // FIXME: Required because wonky depenceny resolution
 
         // World Generation
         +Mod.biomesOPlenty // More biomes and content
