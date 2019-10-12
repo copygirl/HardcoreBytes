@@ -70,6 +70,7 @@ root(voodoo.provider.CurseProvider) {
         +Mod.charsetImmersion     // Stack ingots, plates and gears in-world
         +Mod.chiselsBits          // Build custom sub-block decorations
         +Mod.fairyLights          // Adds adorable looking hanging lights
+        +Mod.pyrotech             // Primitive tools and devices with zero GUIs
         +Mod.quark                // Tons of Vanilla-style tweaks and additions
         +Mod.quarkOddities        // Matrix enchanting and Totem of Holding
         +Mod.wearableBackpacks    // Backpacks!

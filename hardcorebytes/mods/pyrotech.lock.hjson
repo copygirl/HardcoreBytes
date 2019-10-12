@@ -1,0 +1,12 @@
+{
+    provider: CURSE,
+    dependencies: {
+        REQUIRED: [
+            dropt,
+            patchouli,
+            athenaeum
+        ]
+    },
+    projectID: 306676,
+    fileID: 2807435
+}
