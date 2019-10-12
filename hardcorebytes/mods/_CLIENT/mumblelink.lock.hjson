@@ -1,0 +1,9 @@
+{
+    provider: CURSE,
+    side: CLIENT,
+    description: "Links Minecraft to Mumble, enabling positional audio",
+    optionalData: {
+    },
+    projectID: 222432,
+    fileID: 2518559
+}

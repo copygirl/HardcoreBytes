@@ -158,6 +158,8 @@ root(voodoo.provider.CurseProvider) {
             }.list {
                 +Mod.betterFoliage configure
                     { description = "Prettier vegetation, such as leaves and grass, at some FPS cost" }
+                +Mod.mumblelink configure
+                    { description = "Links Minecraft to Mumble, enabling positional audio" }
             }
         }
     }
