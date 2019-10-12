@@ -107,7 +107,7 @@ root(voodoo.provider.CurseProvider) {
 
         withProvider(LocalProvider).list {
             +"HardcoreBytesMod" configure {
-                fileSrc = "HardcoreBytesMod-1.12.2-0.1.0-SNAPSHOT+9341d4f.jar"
+                fileSrc = "HardcoreBytesMod-1.12.2-0.1.0-SNAPSHOT+3525ab8.jar"
             }
         }
 
