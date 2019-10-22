@@ -8,9 +8,9 @@ You will struggle with wildy unfamiliar crafting recipes and mechanics, explore 
 
 - *[Geolosys]:* For overhauled ore generation. Much rarer and larger veins.
 - *[Biomes O' Plenty]:* Provides additional biomes for a more diverse world.
+- *[Pyrotech]:* Mix up early-game experience with a TFC-like feel.
 - *[Better With Mods]:* Offers early-game mechanical power.
 - *[Immersive Engineering]:* Bridges mechanical and electrical power.
-- *[RetroComputers]:* Low-tier alternative to *OpenComputers*.
 - *[Thaumcraft]:* Extra flavor and a way to craft "magical" components.
 - *[Psi]:* Programmable spells, unlocked with late-game magic and technology.
 
@@ -49,7 +49,7 @@ Make sure to clone and build the companion mod [Hardcore Bytes Mod] and place it
 [Biomes O' Plenty]:      https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
 [Better With Mods]:      https://www.curseforge.com/minecraft/mc-mods/bwm-suite
 [Immersive Engineering]: https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
-[RetroComputers]:        https://www.curseforge.com/minecraft/mc-mods/retrocomputers
 [Thaumcraft]:            https://www.curseforge.com/minecraft/mc-mods/thaumcraft
 [Psi]:                   https://www.curseforge.com/minecraft/mc-mods/psi
+[Pyrotech]:              https://www.curseforge.com/minecraft/mc-mods/pyrotech
 [Hardcore Bytes Mod]:    https://github.com/copygirl/HardcoreBytesMod
