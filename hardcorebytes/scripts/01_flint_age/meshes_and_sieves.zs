@@ -1,9 +1,9 @@
 #priority -100
 
 
-var plant_fiber = <hardcorebytesmod:plant_fiber>;
-var string_     = <minecraft:string>; // "string" is a keyword.
-var stick       = <minecraft:stick>;
+var plant_fibers = <pyrotech:material:12>;
+var string_      = <minecraft:string>; // "string" is a keyword :(
+var stick        = <minecraft:stick>;
 
 var plant_fiber_mesh = <hardcorebytesmod:plant_fiber_mesh>;
 var string_mesh      = <hardcorebytesmod:string_mesh>;
@@ -27,8 +27,8 @@ sieves.add(string_sieve);
 // Meshes
 
 recipes.addShaped("plant_fiber_mesh", plant_fiber_mesh,
-    [[ plant_fiber, plant_fiber ],
-     [ plant_fiber, plant_fiber ]]);
+    [[ plant_fibers, plant_fibers ],
+     [ plant_fibers, plant_fibers ]]);
 
 // TODO: Craft string mesh in tailor's worktable.
 recipes.addShaped("string_mesh", string_mesh,

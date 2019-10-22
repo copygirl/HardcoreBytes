@@ -22,7 +22,7 @@ var hammer  = <hardcorebytesmod:primitive_flint_hammer>;
 // ======================
 
 binding.add(<minecraft:string>);
-binding.add(<hardcorebytesmod:plant_fiber>);
+binding.add(<pyrotech:material:12>);
 // TODO: Add hemp fiber as well?
 
 // Flint Knife is able to gather plant fiber better.
