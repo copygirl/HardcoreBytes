@@ -2,11 +2,11 @@
     provider: CURSE,
     dependencies: {
         REQUIRED: [
+            athenaeum,
             dropt,
-            patchouli,
-            athenaeum
+            patchouli
         ]
     },
     projectID: 306676,
-    fileID: 2807435
+    fileID: 2811471
 }

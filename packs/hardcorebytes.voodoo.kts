@@ -87,7 +87,6 @@ root(voodoo.provider.CurseProvider) {
             +Mod.openprinter            // - Printing pages, Folders, File Cabinets
             +Mod.openscreens            // - Flatscreens and holographic screens
             // Computronics (see below) // - Additional computer components
-        +Mod.retrocomputers             // Simpler computers programmable with Forth
         +Mod.simplelogicGates           // Various redstone gates
         +Mod.simplelogicWires           // Redstone wires (normal, insulated, bundled)
         // Magic
