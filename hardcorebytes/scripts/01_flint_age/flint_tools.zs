@@ -21,11 +21,11 @@ var hammer  = <hardcorebytesmod:primitive_flint_hammer>;
 // Ore Dictionary Entries
 // ======================
 
-binding.add(<minecraft:string>);
-binding.add(<pyrotech:material:12>);
+binding.add(<minecraft:string>);     // String
+binding.add(<pyrotech:material:14>); // Twine
 // TODO: Add hemp fiber as well?
 
-// Flint Knife is able to gather plant fiber better.
+// Flint Knife is able to gather plant fibers better.
 <ore:toolGatherPlantFiber>.add(knife);
 
 

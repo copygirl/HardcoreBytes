@@ -45,7 +45,7 @@ var stick_and_plant_fiber = [
 
 
 function drop_plant_fiber(blocks as string[], chance as int) {
-    // With the proper tool you gather plant fiber 4x more efficiently.
+    // With the proper tool you gather plant fibers 4x more efficiently.
     Dropt.list("plant_fiber").add(Dropt.rule()
         .matchBlocks(blocks)
         .matchHarvester(Dropt.harvester()
@@ -67,13 +67,13 @@ function drop_plant_fiber(blocks as string[], chance as int) {
     );
 }
 
-// Somtimes drop plant fiber from ground plants.
+// Somtimes drop plant fibers from ground plants.
 drop_plant_fiber(low_chance_plant_fiber, LOW_CHANCE_WEIGHT);
 drop_plant_fiber(medium_chance_plant_fiber, MEDIUM_CHANCE_WEIGHT);
 drop_plant_fiber(high_chance_plant_fiber, HIGH_CHANCE_WEIGHT);
 
 
-// Drop 1-2 sticks and 0-2 plant fiber from bush-like plants.
+// Drop 1-2 sticks and 0-2 plant fibers from bush-like plants.
 Dropt.list("plant_fiber").add(Dropt.rule()
     .matchBlocks(stick_and_plant_fiber)
     .replaceStrategy("ADD")

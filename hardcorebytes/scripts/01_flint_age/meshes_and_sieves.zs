@@ -1,14 +1,10 @@
 #priority -100
 
 
-var plant_fibers = <pyrotech:material:12>;
-var string_      = <minecraft:string>; // "string" is a keyword :(
-var stick        = <minecraft:stick>;
-
-var plant_fiber_mesh = <hardcorebytesmod:plant_fiber_mesh>;
-var string_mesh      = <hardcorebytesmod:string_mesh>;
-var plant_fiber_sieve = <hardcorebytesmod:primitive_plant_fiber_sieve>;
-var string_sieve      = <hardcorebytesmod:primitive_string_sieve>;
+var twine_mesh   = <hardcorebytesmod:twine_mesh>;
+var string_mesh  = <hardcorebytesmod:string_mesh>;
+var twine_sieve  = <hardcorebytesmod:primitive_twine_sieve>;
+var string_sieve = <hardcorebytesmod:primitive_string_sieve>;
 
 
 // ======================
@@ -16,7 +12,7 @@ var string_sieve      = <hardcorebytesmod:primitive_string_sieve>;
 // ======================
 
 var sieves = <ore:sievePrimitive>;
-sieves.add(plant_fiber_sieve);
+sieves.add(twine_sieve);
 sieves.add(string_sieve);
 
 
@@ -26,11 +22,13 @@ sieves.add(string_sieve);
 
 // Meshes
 
-recipes.addShaped("plant_fiber_mesh", plant_fiber_mesh,
-    [[ plant_fibers, plant_fibers ],
-     [ plant_fibers, plant_fibers ]]);
+var twine = <pyrotech:material:14>;
+recipes.addShaped("twine_mesh", twine_mesh,
+    [[ twine, twine ],
+     [ twine, twine ]]);
 
 // TODO: Craft string mesh in tailor's worktable.
+var string_ = <minecraft:string>; // "string" is a keyword :(
 recipes.addShaped("string_mesh", string_mesh,
     [[ string_, string_ ],
      [ string_, string_ ]]);
@@ -38,9 +36,9 @@ recipes.addShaped("string_mesh", string_mesh,
 
 // Primitive Sieves
 
-recipes.addShapeless("primitive_plant_fiber_sieve", plant_fiber_sieve,
-    [ plant_fiber_mesh, stick, stick ]);
-
+var stick = <minecraft:stick>;
+recipes.addShapeless("primitive_twine_sieve", twine_sieve,
+    [ twine_mesh, stick, stick ]);
 recipes.addShapeless("primitive_string_sieve", string_sieve,
     [ string_mesh, stick, stick ]);
 
