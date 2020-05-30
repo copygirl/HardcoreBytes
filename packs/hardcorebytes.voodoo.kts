@@ -1,33 +1,27 @@
-@file:GenerateForge(name="Forge", mc="1.12.2")
-@file:GenerateMods(name="Mod", mc="1.12.2")
-@file:GenerateMods(name="Mod", mc="1.12.1")
-@file:GenerateMods(name="Mod", mc="1.12")
-
 title     = "Hardcore Bytes"
 authors   = listOf("copygirl")
 version   = "0.0.1"
+icon      = rootFolder.resolve("icon.png")
+
 mcVersion = "1.12.2"
-icon      = rootDir.resolve("icon.png")
-forge     = Forge.mc1_12_2_latest
+modloader { forge(Forge.mc1_12_2_latest) }
 
 pack {
     multimc {
-        skPackUrl = "https://meowface.org/copygirl/HardcoreBytes/hardcorebytes.json"
+        selfupdateUrl = "https://meowface.org/copygirl/HardcoreBytes/hardcorebytes.json"
     }
-    skcraft {
-        userFiles = UserFiles(
-            include = listOf("options.txt"),
-            exclude = listOf()
-        )
+    experimental {
+        userFiles = FnPatternList(include = listOf(
+            "options.txt"
+        ))
     }
 }
 
-root(voodoo.provider.CurseProvider) {
-    validMcVersions = setOf("1.12.2", "1.12.1", "1.12")
-    releaseTypes    = setOf(FileType.Release, FileType.Beta)
+root<Curse> {
+    releaseTypes = setOf(FileType.Release, FileType.Beta, FileType.Alpha)
 
     // COMMON MODS
-    list {
+    it.list {
         // Libraries
         +Mod.applecore   // Food related library, required for BWM's HCHunger
         +Mod.baubles     // Adds 7 more equipment slots for items
@@ -48,24 +42,25 @@ root(voodoo.provider.CurseProvider) {
             +Mod.armorUnderwearMod // - Add TaN linings to any armor
 
         // Tweaks and Utilities
-        +Mod.appleskin           // Displays hunger and saturation info
-        +Mod.anvilPatchLawful    // Remove increase in enchantment / repair cost
-        +Mod.artisanWorktables   // Custom crafting tables, can use tools and fluids
-        +Mod.crafttweaker        // Add, change and remove recipes
-            +Mod.dropt           // - Add and modify block drops
-            +Mod.loottweaker     // - Changing of loot tables
-            +Mod.modtweaker      // - Change more mod-related recipes
-            +Mod.inworldcrafting // - Add in-world recipes (fluid, burn, explode)
-        +Mod.dynamicSurroundings // Improve visual and audible experience
-        +Mod.foamfixForMinecraft // Optimizations for cutting down RAM usage
-        +Mod.itemphysic          // Custom pickup, floating, burning tweaks, ...
-        +Mod.jei                 // Look up recipes and uses of items
-        +Mod.multiMine           // Save mining progress, mine with other players
-        +Mod.passableLeaves      // Pass through leaves
+        +Mod.appleskin              // Displays hunger and saturation info
+        +Mod.anvilPatchLawful       // Remove increase in enchantment / repair cost
+        +Mod.artisanWorktables      // Custom crafting tables, can use tools and fluids
+        +Mod.artisanAutomation      // Automation for Artisan Worktables
+        +Mod.crafttweaker           // Add, change and remove recipes
+            +Mod.dropt              // - Add and modify block drops
+            +Mod.loottweaker        // - Changing of loot tables
+            +Mod.modtweaker         // - Change more mod-related recipes
+            +Mod.inworldcrafting    // - Add in-world recipes (fluid, burn, explode)
+        +Mod.dynamicSurroundings    // Improve visual and audible experience
+        +Mod.foamfixOptimizationMod // Optimizations for cutting down RAM usage
+        +Mod.itemphysic             // Custom pickup, floating, burning tweaks, ...
+        +Mod.jei                    // Look up recipes and uses of items
+        +Mod.multiMine              // Save mining progress, mine with other players
+        +Mod.passableLeaves         // Pass through leaves
+        // +Mod.respawnablePets     // TODO: ?
 
         // Content
         +Mod.antiqueAtlas         // Craftable atlas with waypoints
-        +Mod.cofhCore             // More potions and enchantments
         +Mod.charsetBlockCarrying // Pick up blocks and carry them around
         +Mod.charsetImmersion     // Stack ingots, plates and gears in-world
         +Mod.chiselsBits          // Build custom sub-block decorations
@@ -98,29 +93,20 @@ root(voodoo.provider.CurseProvider) {
             +Mod.thaumicAugmentation         // - More magic and doors
         +Mod.psi                             // Programmable magic guns
 
-        withProvider(DirectProvider).list {
-            +"computronics" configure {
-                url      = "http://files.vexatos.com/Computronics/Computronics-1.12.2-1.6.6.jar"
-                fileName = "Computronics-1.12.2-1.6.6.jar"
-            }
+        withTypeClass(Direct::class) {  }.list {
+            +"computronics" { url = "http://files.vexatos.com/Computronics/Computronics-1.12.2-1.6.6.jar" }
         }
 
-        withProvider(LocalProvider).list {
-            +"HardcoreBytesMod" configure {
-                fileSrc = "HardcoreBytesMod-1.12.2-0.1.0-SNAPSHOT+3525ab8.jar"
-            }
+        withTypeClass(Local::class) {  }.list {
+            +"hardcoreBytesMod" { fileSrc = "HardcoreBytesMod-1.12.2-0.1.0-SNAPSHOT+0a72038.jar" }
         }
 
         // SERVER RECOMMENDED MODS
         group {
             side = Side.SERVER
-            optional {
-                selected = true
-                skRecommendation = Recommendation.starred
-            }
+            optional { selected = true }
         }.list {
-            +Mod.btfuContinuousRsyncIncrementalBackup configure
-                { description = "Best backup mod in existance! (setup required)" }
+            +Mod.btfuContinuousRsyncIncrementalBackup { name = "BTFU"; description = "Best backup mod in existence! (setup required)" }
         }
 
         // CLIENT MODS
@@ -134,31 +120,22 @@ root(voodoo.provider.CurseProvider) {
 
             // CLIENT RECOMMENDED MODS
             group {
-                optional {
-                    selected = true
-                    skRecommendation = Recommendation.starred
-                }
+                optional { selected = true }
             }.list {
-                +Mod.betterPlacement configure
-                    { description = "Don't skip blocks when holding down mouse button to place" }
-                +Mod.blur configure
-                    { description = "When a GUI is open, fade out the world in the background" }
-                +Mod.itemScroller configure
-                    { description = "Use scroll wheel and other shortcuts to move items" }
-                +Mod.soundFilters configure
-                    { description = "Adds reverb in caves and mutes sounds that are occluded" }
+                +Mod.betterPlacement { description = "Don't skip blocks when holding down mouse button to place" }
+                +Mod.blur            { description = "When a GUI is open, fade out the world in the background" }
+                +Mod.itemScroller    { description = "Use scroll wheel and other shortcuts to move items" }
+                +Mod.soundFilters    { description = "Adds reverb in caves and mutes sounds that are occluded" }
             }
 
             // CLIENT OPTIONAL MODS
             group {
-                optional {
-                    selected = false
-                }
+                optional { selected = false }
             }.list {
-                +Mod.betterFoliage configure
-                    { description = "Prettier vegetation, such as leaves and grass, at some FPS cost" }
-                +Mod.mumblelink configure
-                    { description = "Links Minecraft to Mumble, enabling positional audio" }
+                +Mod.betterFoliage   { description = "Prettier vegetation, such as leaves and grass, at some FPS cost" }
+                +Mod.mumblelink      { description = "Links Minecraft to Mumble, enabling positional audio" }
+                // This should be `+Mod.probe` but CurseForge's API does not expose mods with only alpha releases.
+                +(ProjectID(312683)) { description = "[MODPACK DEVELOPMENT] Dumps information to use with ZenScript VSCode extension" }
             }
         }
     }

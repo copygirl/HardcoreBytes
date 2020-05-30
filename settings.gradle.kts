@@ -7,7 +7,6 @@ pluginManagement {
             name = "kotlinx"
         }
         mavenCentral()
-        jcenter()
         gradlePluginPortal()
     }
 }

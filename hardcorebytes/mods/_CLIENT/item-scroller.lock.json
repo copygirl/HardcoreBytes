@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "side": "CLIENT",
+        "description": "Use scroll wheel and other shortcuts to move items",
+        "optionalData": {
+            "selected": true
+        }
+    },
+    "projectID": 242064,
+    "fileID": 2581199
+}

@@ -1,0 +1,17 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "side": "CLIENT",
+        "description": "[MODPACK DEVELOPMENT] Dumps information to use with ZenScript VSCode extension",
+        "optionalData": {
+        },
+        "dependencies": {
+            "REQUIRED": [
+                "crafttweaker",
+                "jei"
+            ]
+        }
+    },
+    "projectID": 312683,
+    "fileID": 2898087
+}

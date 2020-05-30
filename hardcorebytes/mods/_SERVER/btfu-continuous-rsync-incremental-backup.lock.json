@@ -1,0 +1,13 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "name": "BTFU",
+        "side": "SERVER",
+        "description": "Best backup mod in existence! (setup required)",
+        "optionalData": {
+            "selected": true
+        }
+    },
+    "projectID": 246105,
+    "fileID": 2535073
+}

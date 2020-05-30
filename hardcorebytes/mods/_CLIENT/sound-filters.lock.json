@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "side": "CLIENT",
+        "description": "Adds reverb in caves and mutes sounds that are occluded",
+        "optionalData": {
+            "selected": true
+        }
+    },
+    "projectID": 222789,
+    "fileID": 2892340
+}

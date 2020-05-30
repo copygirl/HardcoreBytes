@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "bwm-suite"
+            ]
+        }
+    },
+    "projectID": 279887,
+    "fileID": 2549624
+}

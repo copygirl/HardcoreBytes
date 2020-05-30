@@ -1,33 +1,25 @@
 plugins {
-    // kotlin("jvm") version "1.3.31" // automatically applied
-    // idea // automatically applied
-    id("voodoo") version "0.4.9-SNAPSHOT"
+    // idea                           // automatically applied
+    // kotlin("jvm") version "1.3.70" // automatically applied
+    id("voodoo") version "0.5.9-SNAPSHOT"
 }
 
 voodoo {
-    addTask(name = "build", parameters = listOf("build"))
-    addTask(name = "pack_sk", parameters = listOf("pack sk"))
-    addTask(name = "pack_mmc", parameters = listOf("pack mmc"))
-    addTask(name = "pack_mmc-static", parameters = listOf("pack mmc-static"))
-    addTask(name = "pack_mmc-fat", parameters = listOf("pack mmc-fat"))
-    addTask(name = "pack_server", parameters = listOf("pack server"))
-    addTask(name = "pack_curse", parameters = listOf("pack curse"))
-    addTask(name = "test_mmc", parameters = listOf("test mmc"))
-    addTask(name = "buildAndPackAll", parameters = listOf("build", "pack sk", "pack server", "pack mmc"))
-}
-
-repositories {
-    maven(url = "http://maven.modmuss50.me/") {
-        name = "modmuss50"
+    addTask("build") { build() }
+    addTask(name = "changelog") { changelog() }
+    addTask(name = "pack_voodoo") { pack().voodoo() }
+    addTask(name = "pack_mmc-voodoo") { pack().multimcVoodoo() }
+    addTask(name = "pack_mmc-fat") { pack().multimcFat() }
+    addTask(name = "pack_server") { pack().server() }
+    addTask(name = "test_mmc") { test().multimc() }
+    addTask(name = "pack_all") {
+        pack().server()
+        pack().voodoo()
+        pack().multimcVoodoo()
+        // pack().multimcFat()
     }
-    maven(url = "https://kotlin.bintray.com/kotlinx") {
-        name = "kotlinx"
-    }
-    mavenCentral()
-    jcenter()
-}
 
-dependencies {
-    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.9+")
-    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.9+")
+    generatedSourceShared { rootFolder -> rootFolder.resolve("src/main/kotlin") }
+    generateForge("Forge", "1.12.2")
+    generateCurseforgeMods("Mod", "1.12", "1.12.1", "1.12.2")
 }

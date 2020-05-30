@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "athenaeum"
+            ]
+        }
+    },
+    "projectID": 284973,
+    "fileID": 2957599
+}

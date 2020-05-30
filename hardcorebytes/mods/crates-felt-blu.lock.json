@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "immersive-engineering"
+            ]
+        }
+    },
+    "projectID": 286032,
+    "fileID": 2523545
+}

@@ -1,5 +1,16 @@
 /.gradle/
+
+# Stores additional meta information for Voodoo.
 /.meta/
+# Voodoo build output folder.
 /build/
-/local/
+# Voodoo logs.
+/logs/
+# Voodoo timing output.
 /reports/
+
+# Folder which stores untracked files such as unreleased mods.
+/local/
+# We output the generated Kotlin scripts for Forge and Mod
+# classes into src/ so the VSCode plugin actually picks them up.
+/src/

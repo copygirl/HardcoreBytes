@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "thaumcraft"
+            ]
+        }
+    },
+    "projectID": 319441,
+    "fileID": 2962468
+}

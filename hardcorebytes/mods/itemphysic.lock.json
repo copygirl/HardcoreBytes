@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "creativecore"
+            ]
+        }
+    },
+    "projectID": 258587,
+    "fileID": 2959712
+}

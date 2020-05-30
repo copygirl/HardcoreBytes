@@ -1,0 +1,13 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "dynamictrees",
+                "biomes-o-plenty"
+            ]
+        }
+    },
+    "projectID": 289529,
+    "fileID": 2650352
+}

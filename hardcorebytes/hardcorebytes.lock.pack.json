@@ -1,0 +1,26 @@
+{
+    "id": "hardcorebytes",
+    "mcVersion": "1.12.2",
+    "modloader": {
+        "type": "Modloader.Forge",
+        "mcVersion": "1.12.2",
+        "forgeVersion": "14.23.5.2854"
+    },
+    "title": "Hardcore Bytes",
+    "version": "0.0.1",
+    "authors": [
+        "copygirl"
+    ],
+    "packOptions": {
+        "multimcOptions": {
+            "selfupdateUrl": "https://meowface.org/copygirl/HardcoreBytes/hardcorebytes.json"
+        },
+        "experimentalOptions": {
+            "userFiles": {
+                "include": [
+                    "options.txt"
+                ]
+            }
+        }
+    }
+}

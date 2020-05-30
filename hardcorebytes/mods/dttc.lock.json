@@ -1,0 +1,13 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "dependencies": {
+            "REQUIRED": [
+                "dynamictrees",
+                "thaumcraft"
+            ]
+        }
+    },
+    "projectID": 292752,
+    "fileID": 2650353
+}

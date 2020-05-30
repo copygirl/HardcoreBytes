@@ -1,0 +1,12 @@
+{
+    "type": "voodoo.data.lock.LockEntry.Curse",
+    "common": {
+        "side": "CLIENT",
+        "description": "When a GUI is open, fade out the world in the background",
+        "optionalData": {
+            "selected": true
+        }
+    },
+    "projectID": 268324,
+    "fileID": 2460821
+}
